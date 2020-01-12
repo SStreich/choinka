@@ -1,21 +1,14 @@
 package zadanie_domowe.mikolaje;
 
+import zadanie_domowe.Prezent;
+import zadanie_domowe.prezentobiorcy.Prezentobiorca;
 import zadanie_domowe.prezentobiorcy.ZaDuzoPrezentow;
 
-public abstract class Mikolaj {
-    private String nazwa;
+public interface Mikolaj {
 
-    Mikolaj(String nazwa) {
-        this.nazwa = nazwa;
-    }
+    void dajPrezent(Prezentobiorca prezentobiorca);
 
-    protected abstract void dajPrezent() throws ZaDuzoPrezentow;
-
-    public void sprobujDacPrezent() {
-        try {
-            dajPrezent();
-        } catch (ZaDuzoPrezentow ex) {
-            System.out.println(ex.toString());
-        }
+    default void przedstawSie(String imie) {
+        System.out.println("Witaj! Nazywam sie " + imie + "i mam dla Ciebie prezent!");
     }
 }
