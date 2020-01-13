@@ -11,4 +11,5 @@ public interface Mikolaj {
     default void przedstawSie(String imie) {
         System.out.println("Witaj! Nazywam sie " + imie + "i mam dla Ciebie prezent!");
     }
+
 }

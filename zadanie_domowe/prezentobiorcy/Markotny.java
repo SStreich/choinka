@@ -5,13 +5,12 @@ import zadanie_domowe.Prezent;
 public class Markotny extends Prezentobiorca {
     public Markotny(int limitPrezentow) {
         super(limitPrezentow);
+        this.zadowolony = false;
     }
 
     @Override
     public void przyjmijPrezent(Prezent prezent) throws ZaDuzoPrezentow {
-        if(prezenty.size() >= limitPrezentów) {
-            throw new ZaDuzoPrezentow();
-        } else {
+        if(!czyZaDuzoPrezentow()) {
             if (prezent.getRodzaj().equals("Rózga")) {
                 this.rozgi++;
             } else {

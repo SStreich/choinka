@@ -27,5 +27,10 @@ public class Konserwatywny implements Mikolaj {
     public void przedstawSie() {
         przedstawSie(imie);
     }
+
+    @Override
+    public String toString() {
+        return "Konserwatywny";
+    }
 }
 

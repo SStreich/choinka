@@ -11,6 +11,14 @@ public class Typowy extends Prezentobiorca {
 
     @Override
     public void przyjmijPrezent(Prezent prezent) throws ZaDuzoPrezentow {
-
+        if (!czyZaDuzoPrezentow()) {
+            if(prezent.czyRózga()) {
+                rozgi++;
+            } else {
+                prezenty.add(prezent);
+                if(prezent.getRodzaj().equals(marzenie.name()) && rozgi == 0) zadowolony = true;
+            }
+        }
     }
+
 }

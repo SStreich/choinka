@@ -1,5 +1,7 @@
 package zadanie_domowe;
 
+import zadanie_domowe.prezentobiorcy.Marzenia;
+
 public class Prezent {
     private String nazwa;
     private String rodzaj;
@@ -9,6 +11,10 @@ public class Prezent {
         this.rodzaj = rodzaj;
     }
 
+    public boolean czyRózga() {
+        return getRodzaj().equals("Rózga");
+    }
+
     public String getNazwa() {
         return nazwa;
     }
@@ -16,4 +22,6 @@ public class Prezent {
     public String getRodzaj() {
         return rodzaj;
     }
+
+
 }

@@ -21,4 +21,9 @@ public class Rodzinny implements Mikolaj {
     public void przedstawSie() {
         przedstawSie(imie);
     }
+
+    @Override
+    public String toString() {
+        return "Rodzinny";
+    }
 }
