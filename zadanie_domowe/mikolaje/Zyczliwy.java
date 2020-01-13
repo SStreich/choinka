@@ -1,6 +1,7 @@
 package zadanie_domowe.mikolaje;
 
 import zadanie_domowe.Prezent;
+import zadanie_domowe.prezentobiorcy.Marzenia;
 import zadanie_domowe.prezentobiorcy.Prezentobiorca;
 import zadanie_domowe.prezentobiorcy.ZaDuzoPrezentow;
 
@@ -16,6 +17,12 @@ public class Zyczliwy implements Mikolaj {
         this.imie = imie;
     }
     public void dajPrezent(Prezentobiorca prezentobiorca) {
+        String idealnyPrezent;
+        if (prezentobiorca.getMarzenie() == Marzenia.INNE) {
+            idealnyPrezent  = "Skarpetki";
+        } else {
+            idealnyPrezent = "Idealny prezent z kategorii " + prezentobiorca.getMarzenie().name();
+        }
         Prezent prezent = new Prezent("Idealny prezent", prezentobiorca.getMarzenie().name());
         try {
             prezentobiorca.przyjmijPrezent(prezent);
