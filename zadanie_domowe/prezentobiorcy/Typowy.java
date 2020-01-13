@@ -6,6 +6,7 @@ public class Typowy extends Prezentobiorca {
 
     public Typowy(int limitPrezentow) {
         super(limitPrezentow);
+        zadowolony = false;
         this.marzenie = Marzenia.MAJSTERKOWANIE;
     }
 
@@ -14,6 +15,7 @@ public class Typowy extends Prezentobiorca {
         if (!czyZaDuzoPrezentow()) {
             if(prezent.czyRózga()) {
                 rozgi++;
+                zadowolony = false;
             } else {
                 prezenty.add(prezent);
                 if(prezent.getRodzaj().equals(marzenie.name()) && rozgi == 0) zadowolony = true;
